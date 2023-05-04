@@ -62,7 +62,8 @@ La cual implica:
 Licencia MIT: es una licencia de software libre permisiva que permite la distribución de software libre y de código abierto sin restricciones en su uso, copia, modificación y distribución, siempre y cuando se incluya el aviso de copyright y la licencia.
 
 
-#Pasos a hacer:
+## Pasos a hacer:
+
 ## Instrucciones
 
 ### Descargar el conjunto de datos de imágenes
