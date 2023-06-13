@@ -46,9 +46,28 @@ spark-submit clasificacion_imagenes.py
 
 El programa cargará las imágenes, creará un vector de características para cada una y entrenará un modelo de Random Forest utilizando el conjunto de entrenamiento. El modelo se utilizará para predecir la categoría de las imágenes del conjunto de prueba. El programa mostrará la precisión del modelo utilizando la función "multiclassClassificationEvaluator".
 
+## Última actualización: Uso de UDF para la extracción de características
+Las Funciones de Usuario Definidas (UDF) son una característica potente de PySpark que permiten definir transformaciones personalizadas en un DataFrame. Estas funciones son escritas en Python y pueden ser registradas y utilizadas en PySpark para operar en columnas de un DataFrame.
+
+Una UDF toma un conjunto de columnas de entrada y produce una nueva columna de salida, permitiendo transformaciones más complejas y personalizadas que las que están disponibles con las funciones incorporadas de PySpark. 
+
+Las UDF pueden devolver un solo valor (como un entero, una cadena, un booleano, etc.) o un tipo de datos más complejo (como un array o un diccionario). Esto permite una gran flexibilidad a la hora de extraer y manipular datos.
+
+## ¿Por qué se ha elegido UDF para la actualización del proyecto?
+
+Se eligieron las UDF para esta actualización del proyecto debido a su flexibilidad y poder para manejar transformaciones de datos personalizadas. En el contexto de la clasificación de imágenes, las UDF permiten la extracción de características de las imágenes que pueden no ser fácilmente accesibles utilizando solo las funciones incorporadas de PySpark.
+
+Por ejemplo, en este proyecto, se han definido UDF para calcular la intensidad promedio de los píxeles y la varianza de la intensidad de los píxeles de las imágenes. Estas características proporcionan información adicional sobre las imágenes que puede ser útil para mejorar la precisión de la clasificación.
+
+Además, las UDF permiten una mayor personalización y adaptabilidad. Si en el futuro se identifican nuevas características útiles para la clasificación de imágenes, estas se pueden extraer fácilmente definiendo y aplicando nuevas UDF.
+
+
+
+
 ## Personalización
 
-Puedes personalizar el proyecto cambiando los parámetros del modelo de Random Forest (por ejemplo, el número de árboles, la profundidad máxima, etc.) para mejorar la precisión del modelo.
+Puedes personalizar el proyecto cambiando los parámetros del modelo de Random Forest (por ejemplo, el número de árboles, la profundidad máxima, etc.) para mejorar la precisión del modelo. También puedes definir tus propias UDF para extraer otras características de las imágenes.
+
 
 ## Créditos
 
