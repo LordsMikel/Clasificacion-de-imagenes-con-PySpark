@@ -3,6 +3,8 @@
 Este proyecto está actualmente en desarrollo y puede contener errores o funcionar de manera impredecible. Utilícelo bajo su propio riesgo y no lo utilice en producción hasta que se publique una versión estable.
 
 
+## Versión 2.0 del Proyecto ⚠️ 
+
 # Clasificación de imágenes con PySpark
 
 Este proyecto utiliza PySpark y técnicas de aprendizaje automático para clasificar imágenes en diferentes categorías.
